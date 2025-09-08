@@ -53,10 +53,25 @@ export function useGeolocation(){
                 errorMessage="An unknown error occurred";
 
         }
+
+        setLocationData({
+            coordinates:null,
+            error:errorMessage,
+            isLoading:false,
+        })
+     },{
+        enableHighAccuracy:true,
+        timeout:5000,
+        maximumAge:0,
      });
     }
     useEffect(()=>{
         getLocation();
     },[]);
+
+    return{
+        ...locationData,
+        getLocation
+    }
 
 }
