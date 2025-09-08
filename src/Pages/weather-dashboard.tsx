@@ -1,6 +1,5 @@
 import { Button } from '@/components/ui/button'
 import { RefreshCw } from 'lucide-react'
-import React from 'react'
 
 const weatherDashboard = () => {
 
