@@ -5,6 +5,9 @@ import { MapPin, RefreshCw } from 'lucide-react'
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 import { useForecastQuery, useReverseGeocodeQuery, useWeatherQuery } from '@/components/hooks/use-weather';
 import CurrentWeather from '@/components/current-weather';
+import HourlyTemparature from '@/components/hourly-temparature';
+import WeatherDetails from '@/components/weather-details';
+import WeatherForecast from '@/components/weather-forcast';
 
 const weatherDashboard = () => {
 const 
@@ -93,18 +96,23 @@ return (<Alert variant="destructive">
      </div>
 
      <div className='grid gap-6'>
-      <div>
+      <div className='flex flex-row lg:flex-row gap-4'>
         < CurrentWeather 
         data={weatherQuery.data}
         locationName={locationName}
         />
        {/*current weather */}
        {/*hourly temperature */}
+       
+       <HourlyTemparature data={forecastQuery.data} />
+
       </div>
 
-      <div>
+      <div className='grid gap-6 md:grid-cols-2 items-start'>
+        <WeatherDetails data={weatherQuery.data}/>
        {/*details*/}
        {/*forcast*/}
+       <WeatherForecast data={forecastQuery.data} />
       </div>
      </div>
     </div>
