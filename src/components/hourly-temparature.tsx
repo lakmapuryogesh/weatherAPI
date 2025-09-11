@@ -3,7 +3,7 @@ import type { ForecastData } from "./api/types"
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import {ResponsiveContainer, XAxis,LineChart,YAxis, Line, Tooltip,} from "recharts";
 import {format} from 'date-fns';
-import { Divide } from "lucide-react";
+
 interface HourlyTemparatureProps{
      data:ForecastData;
 }
