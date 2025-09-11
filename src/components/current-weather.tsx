@@ -1,11 +1,11 @@
-import { Arrow } from "@radix-ui/react-tooltip";
+
 import type { GeocodingResponse,WeatherData } from "./api/types"
 import { Card,  CardContent } from "./ui/card"
 import { ArrowDown, ArrowUp, Droplets, Wind } from "lucide-react";
 
 interface CurrentWeatherprops{
     data:WeatherData,
-    locationname?:GeocodingResponse
+    locationName?:GeocodingResponse
 }
 
 const CurrentWeather = ({data,locationName}:CurrentWeatherprops) => {

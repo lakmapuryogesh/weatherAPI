@@ -99,7 +99,7 @@ return (<Alert variant="destructive">
       <div className='flex flex-row lg:flex-row gap-4'>
         < CurrentWeather 
         data={weatherQuery.data}
-        locationname={locationName}
+        locationName={locationName}
         />
        {/*current weather */}
        {/*hourly temperature */}
